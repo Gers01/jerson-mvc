@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Pagina de Inicio";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenido al sistema de prestamos.</h1>
+    
+</div>
+
+ 
+
+<h1 class="text-info">informe de prestamos</h1>
+
+<div>
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Apellido
+                </th>
+                <th>
+                    Cedula
+                </th>
+                <th>
+                    Direccion
+                </th>
+                <th>
+                    Telefono
+                </th>
+                <th>
+                    Fecha de prestamo
+                </th>
+                 <th>
+                     Monto
+                </th>
+                 <th>
+                     Interes
+                </th>
+                 <th>
+                     Plazo
+                </th>
+                 <th>
+                     Monto Pagado
+                </th>
+
+            </tr>
+        </thead>
+         </table>
+</div>
+
+<div>
+    <a class="btn btn-success" href="../Home/Privacy" >Registro</a>
+</div>
+
+<hr />
+
+@DateTime.Now.ToShortDateString()
