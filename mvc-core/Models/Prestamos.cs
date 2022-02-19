@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace mvc_core.Models
+namespace mvc_core.Models  //tabla prestamos
 {
     public class Prestamos
     {
@@ -9,7 +9,16 @@ namespace mvc_core.Models
         public int Id { get; set; }
 
         [Required]
-        public string NombreCliente { get; set; }
+        public string prestamo { get; set; }
+
+        [Required]
+        public int monto { get; set; }
+
+        [Required]
+        public int interes { get; set; }
+
+        [Required]
+        public int plazo { get; set; }
 
         [Required]
         public int InfopreId { get; set; }
