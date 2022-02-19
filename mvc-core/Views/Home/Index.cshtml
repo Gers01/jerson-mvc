@@ -2,35 +2,36 @@
     ViewData["Title"] = "Ingreso de Datos";
 }
 
-<form class="row" asp-action="crearcliente">
-    <div>
+<form class="form" asp-action="crearcliente">
+    <!--<div class="row">-->
+    <div class="mb-3">
         <label>Nombre </label>
-        <input type="text" class="form-control" placeholder="Nombre" name="nombrecliente" />
+        <input type="text" class="form-control" placeholder="Nombres" name="nombrecliente" />
     </div>
-    <div>
+    <div class="mb-3">
         <label >Apellido </label>
         <input type="text" class="form-control" placeholder="Apellidos" name="apellidocliente" />
     </div>
-    <div>
+    <div class="mb-3">
         <label>Telefono </label>
         <input type="text" class="form-control" placeholder="Telefono" name="telefono" />
     </div>
 
-    <div>
+    <div class="mb-3">
         <label>Direcciòn</label>
         <input type="text" class="form-control" placeholder="Direccion" name="direccion" />
     </div>
 
-    <div>
+    <div class="mb-3">
         <label>Cedula</label>
         <input type="text" class="form-control" placeholder="Cedula" name="cedula" />
     </div>
 
-    <div>
+    <div class="mb-3">
         <label>Monto</label>
         <input type="text" class="form-control" placeholder="Monto" name="monto" />
     </div>
-
+    <!--</div>-->
     
 </form>
 

@@ -23,6 +23,26 @@ namespace mvc_core.Controllers
             return View();
         }
 
+        //accion para eliminar
+        /*public IActionResult EliminarCliente (int id)
+        {
+            List<Infopre> infopre = _context.infopre.where(a => a.prestamoid == id).ToList();
+
+            if (infopre != null)
+                _context.RemoveRange(infopre);
+
+            Prestamos prestamos = _context.Prestamos.where(b => b.Id == id).FirtsOrDefault();
+
+            if (prestamos != null)
+                _context.Remove(prestamos);
+
+            _context.SaveChange();
+
+            List<Prestamos> prestamo = _context.prestamos.ToList();
+
+
+        }*/
+
         public IActionResult Privacy()
         {
             return View();
