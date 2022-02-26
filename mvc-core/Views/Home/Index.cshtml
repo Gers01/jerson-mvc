@@ -2,75 +2,82 @@
     ViewData["Title"] = "Ingreso de Datos";
 }
 
+
+<form class="form" asp-action="CrearCliente" method="post"> 
 <div class="container p-5 my-5 bg-dark text-white">
-    <h3 class="align-content-center">Datos Cliente</h3>
+    <h3 class="font-weight-bold">Datos Cliente</h3>
     <div class="row">
         <div class="col-6">
-            <form class="form" action="/Home/crearcliente" method="post">                
-                <div class="container">
-                    <label>Nombre</label>
+            
+                <div class="mb-3">
+                    <label class="font-weight-bold">Nombre</label>
                     <input class="form-control" type="text" placeholder="Nombres" name="nombrecliente"/>
                 </div>
-                <div class="container">
-                    <label>Apellido</label>
-                    <input class="form-control" type="text" placeholder="Apellido" name="apellidocliente"/>
-                </div>
-                <div class="container">
-                    <label>Cedula de Identidad</label>
+                <div class="mb-3">
+                    <label class="font-weight-bold">Cedula de Identidad</label>
                     <input class="form-control" type="text" placeholder="Cedula" name="cedulacliente"/>
                 </div>
-                
-            </form>
-        </div>
-         <div class="col-6">
-            <div class="container">
-                    <label>Direccion</label>
-                    <input class="form-control" type="text" placeholder="Direccion" name="direccioncliente"/>
-                </div>
-                <div class="container">
-                    <label>Telefono</label>
+                <div class="mb-3">
+                    <label class="font-weight-bold">Telefono</label>
                     <input class="form-control" type="text" placeholder="Telefono" name="telefonocliente"/>
                 </div>
-                <div class="container">
-                    <label>Genero</label>
+                <div class="mb-3">
+                    <label class="font-weight-bold">Referencia Personal</label>
+                    <input class="form-control" type="text" placeholder="Referencia Personal" name="referenciacliente"/>
+                </div>                
+            
+        </div>
+
+          <div class="col-6">
+             
+                <div class="mb-3">
+                    <label class="font-weight-bold">Apellido</label>
+                    <input class="form-control" type="text" placeholder="Apellido" name="apellidocliente"/>
+                </div>
+                <div class="mb-3">
+                    <label class="font-weight-bold">Direccion</label>
+                    <input class="form-control" type="text" placeholder="Direccion" name="direccioncliente"/>
+                </div>
+                <div class="mb-3">
+                    <label class="font-weight-bold">Genero</label>
                     <input class="form-control" type="text" placeholder="Genero" name="generocliente"/>
                 </div>
-         </div>
+                <div class="mb-3">
+                    <label class="font-weight-bold">Telefono Referencia</label>
+                    <input class="form-control" type="text" placeholder="Telefono Referencia" name="treferenciacliente"/>
+                </div>
+            
+           </div>
     </div>
 </div>
 
-<div class="container p-5 my-5 bg-dark text-white">
-    <h3 class="align-content-center">Datos Cliente</h3>
+<div class="container p-5 my-5 bg-info text-white">
+    <h3 class="font-weight-bold">Datos Prestamo</h3>
     <div class="row">
         <div class="col-6">
-            <form class="form" action="/Home/crearcliente" method="post">                
-                <div class="container">
-                    <label>Nombre</label>
-                    <input class="form-control" type="text" placeholder="Nombres" name="nombrecliente"/>
+            
+                <div class="mb-3">
+                    <label class="font-weight-bold">Monto</label>
+                    <input class="form-control" type="text" placeholder="Monto" name="montoprestamo"/>
                 </div>
-                <div class="container">
-                    <label>Apellido</label>
-                    <input class="form-control" type="text" placeholder="Apellido" name="apellidocliente"/>
+                <div class="mb-3">
+                    <label class="font-weight-bold">% Interes</label>
+                    <input class="form-control" type="text" placeholder="Interes" name="interesprestamo"/>
                 </div>
-                <div class="container">
-                    <label>Cedula de Identidad</label>
-                    <input class="form-control" type="text" placeholder="Cedula" name="cedulacliente"/>
-                </div>                
-            </form>
+                             
+            
         </div>
         <div class="col-6">
-            <div class="container">
-                    <label>Direccion</label>
-                    <input class="form-control" type="text" placeholder="Direccion" name="direccioncliente"/>
+            
+                <div class="mb-3">
+                    <label class="font-weight-bold">Plazo</label>
+                    <input class="form-control" type="text" placeholder="Plazo" name="plazoprestamo"/>
                 </div>
-                <div class="container">
-                    <label>Telefono</label>
-                    <input class="form-control" type="text" placeholder="Telefono" name="telefonocliente"/>
+                <div class="mb-3">
+                    <label class="font-weight-bold">Monto por Cuotas</label>
+                    <input class="form-control" type="text" placeholder="Monto Cuotas" name="cuotasprestamo"/>
                 </div>
-                <div class="container">
-                    <label>Genero</label>
-                    <input class="form-control" type="text" placeholder="Genero" name="generocliente"/>
-                </div>
+            
         </div>
     </div>
 </div>
@@ -78,3 +85,4 @@
 <div class="container align-items-center">
         <input type="submit" value="Guardar Datos" class="btn btn-success"/>
     </div>
+</form>

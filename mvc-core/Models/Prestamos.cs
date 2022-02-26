@@ -9,16 +9,22 @@ namespace mvc_core.Models  //tabla prestamos
         public int Id { get; set; }
 
         [Required]
-        public string prestamo { get; set; }
+        public string Idprestamo { get; set; }
 
+        
         [Required]
         public int monto { get; set; }
 
+        
         [Required]
-        public int interes { get; set; }
+        public int Interes { get; set; }
 
         [Required]
         public int plazo { get; set; }
+
+        [StringLength(40)]
+        [Required]
+        public string Montocuotas { get; set; }
 
         [Required]
         public int InfopreId { get; set; }

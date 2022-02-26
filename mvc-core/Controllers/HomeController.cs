@@ -6,22 +6,31 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using mvc_core.Data;
 
 namespace mvc_core.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly MyDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, MyDbContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
             return View();
         }
+
+        //public IActionResult CrearCliente (Index cliente)
+        //{
+        //    _context.Index.Add(cliente);
+        //    return View();
+        //}
 
         //accion para eliminar
         /*public IActionResult EliminarCliente (int id)

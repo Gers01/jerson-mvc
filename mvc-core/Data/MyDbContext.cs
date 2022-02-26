@@ -5,6 +5,8 @@ namespace mvc_core.Data
 {
     public class MyDbContext : DbContext
     {
+        internal object Index;
+
         public MyDbContext(DbContextOptions<MyDbContext> options) : base(options)
         {
 

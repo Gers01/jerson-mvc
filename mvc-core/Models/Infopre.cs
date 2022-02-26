@@ -27,6 +27,10 @@ namespace mvc_core.Models   //tabla cliente
         [Required]
         public string Cedula { get; set; }
 
+        [StringLength(30)]
+        [Required]
+        public int Genero { get; set; }
+
         [StringLength (20)]
         public int UsuarioId { get; set; }
                 
