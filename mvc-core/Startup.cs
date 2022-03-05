@@ -39,6 +39,12 @@ namespace mvc_core
             services.AddRazorPages();
         }
 
+        /*Services.AddAutorization(Options => 
+            {
+            options.FallbackPolicy = new AddAutorizationPolicyBuilder().RequireAuthenticateduser().Build();
+
+        });*/
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
