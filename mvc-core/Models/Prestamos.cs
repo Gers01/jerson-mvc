@@ -13,6 +13,7 @@ namespace mvc_core.Models  //tabla prestamos
 
         
         [Required]
+        [StringLength(100)]
         public int monto { get; set; }
 
         

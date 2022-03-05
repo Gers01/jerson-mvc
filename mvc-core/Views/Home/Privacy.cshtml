@@ -1,4 +1,5 @@
-﻿@{
+﻿<!--referencia, muestra el titulo en la pagina-->
+@{
     ViewData["Title"] = "Tabla de Informaciòn";
 }
 
@@ -9,7 +10,7 @@
 
 <h1 class="text-info">Informe de Prestamos</h1>
 
-
+<!--tabal de datos -->
 <div>
     <table class=" table table-bordered  table-hover ">
         <thead>
@@ -46,13 +47,28 @@
                 </th>
             </tr>
         </thead>
+        <tbody>
+            @{
+                foreach(var Index in Model)
+                {
+                    <tr>
+                        <td>@Index.NombreCategoria</td>
+                        <td>
+                            <a class="btn btn-info" href="@Url.Action("EditarCategoria", new { id = Index.Id })">Editar</a>
+                            <a class="btn btn-danger" href="@Url.Action("EliminarCategoria", new { id = Index.Id })">Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
     </table>
 </div>
 
+<!--boton que lleva a ingresar datos-->
 <div>
     <a class="btn btn-success" href="../Home/Index" >Agregar Nuevo</a>
 </div>
 
+<!--informacion de fecha-->
 <hr />
-
 @DateTime.Now.ToShortDateString()

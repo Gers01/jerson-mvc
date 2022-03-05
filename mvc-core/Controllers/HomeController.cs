@@ -26,11 +26,15 @@ namespace mvc_core.Controllers
             return View();
         }
 
+       
+
         public IActionResult CrearCliente (Index cliente)
         {
-            _context.Add(cliente);
-            //_context.SaveChanges();
+            /*/_context.Add(cliente);
+            //_context.SaveChanges();*/
            return View();
+
+            
         }
 
         //accion para eliminar
