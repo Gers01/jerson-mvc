@@ -1,0 +1,163 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Ingreso";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<section class=" pb-4 vh-67 bg-white border rounded-6" style="background-color: #eee; margin-top:40px; padding-top:30px; padding-bottom:30px;">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid"
+          alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form id="account" method="post">
+          <!--<div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+            <p class="lead fw-normal mb-0 me-3">Ingresar con..</p>
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+              <i class="fab fa-facebook-f"></i>
+            </button>
+            </div>
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+              <i class="fab fa-twitter"></i>
+            </button>
+
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+              <i class="fab fa-linkedin-in"></i>
+            </button>
+          </div>
+
+          <div class="divider d-flex align-items-center my-4">
+            <p class="text-center fw-bold mx-3 mb-0">Or</p>
+          </div>-->
+
+          
+          <hr />
+          <div asp-validation-summary="All" class="text-danger"></div>
+          <!-- Email input -->
+          <div class="form-outline mb-4">           
+            <label class="form-label" >Correo Electronico</label>
+            <input asp-for="Input.Email" class="form-control form-control-lg" placeholder="Correo Electronico"/>
+            <span asp-validation-for="Input.Email" class="text-danger" ></span>
+          </div>
+
+          
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+           
+            <label class="form-label" >Contraseña</label>
+             <input asp-for="Input.Password"  class="form-control form-control-lg" placeholder="Ingrese Contraseña" />
+            <span asp-validation-for="Input.Password" class="text-danger"></span>
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+
+            <!-- Checkbox -->
+            <div class="checkbox">
+                    <label class="form-check-label">
+                    Recordar Contraseña
+                    <input asp-for="Input.RememberMe" />                           
+                    </label>
+            </div>
+
+           <!-- <div class="form-check mb-0">
+                <label class="form-check-label" >
+                <input asp-for="Input.RememberMe" />
+                  Recordar
+                </label>
+            </div>-->
+
+            <a id="forgot-password" asp-page="./ForgotPassword" class="text-body">Olvido Contraseña?</a>
+          </div>
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+
+            <button type="submit" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Ingresar</button>
+
+            <p class="small fw-bold mt-2 pt-1 mb-0">No tengo una cuenta? <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="link-danger">Registrar</a></p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+    <!--Copyright -->
+    <div class="text-white mb-3 mb-md-0">
+      Copyright © 2020. Jersson Reyes | Loan System.
+    </div>
+    <!--Copyright-->
+
+    <!-- Right 
+    <div>
+      <a href="#!" class="text-white me-4">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#!" class="text-white me-4">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#!" class="text-white me-4">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="#!" class="text-white">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+     Right -->
+  </div>
+</section>
+
+
+
+
+<!--<div class="row">
+    <div class="col-md-4">
+        <section>
+            <form id="account" method="post">
+                <h4>Ingrese sus datos.</h4>
+                <hr />
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label >Correo</label>
+                    <input asp-for="Input.Email" class="form-control" />
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label >Contraseña</label>
+                    <input asp-for="Input.Password" class="form-control" />
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label >
+                            Recordar Contraseña
+                            <input asp-for="Input.RememberMe" />
+                            
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Ingresar</button>
+                </div>
+                <div class="form-group">
+                    <p>
+                        <a id="forgot-password" asp-page="./ForgotPassword">Olvido su contraseña?</a>
+                    </p>
+                    <p>
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Registrar un usuario ahora</a>
+                    </p>
+                </div>
+            </form>
+        </section>
+    </div>-->
+
+    <!--aqui va lo que copie
+<!--</div>-->
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

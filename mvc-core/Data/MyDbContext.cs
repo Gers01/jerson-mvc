@@ -11,7 +11,7 @@ namespace mvc_core.Data
 
         }
 
-        public DbSet<Prestamos> Prestamos { get; set; } 
+        public DbSet<Prestamos> Index { get; set; } 
         public DbSet<Infopre> Infopre { get; set; }
 
     }

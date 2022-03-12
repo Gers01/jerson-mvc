@@ -26,18 +26,25 @@ namespace mvc_core.Controllers
             return View();
         }
 
-       
+        /*public IActionResult EditarCliente(int id)
+        {
+           Index modelo = _context.Index.Where(c => c.Id == id).FirstOrDefault();
+           return View("EditarCliente", modelo);
+        }*/
 
+        //accion para guardar los datos en SqlServer
         public IActionResult CrearCliente (Index cliente)
         {
-            /*/_context.Add(cliente);
-            //_context.SaveChanges();*/
-           return View();
+            //cliente.FechaActual = DateTime.Now;
+
+            //_context.Index.Add(cliente);
+            _context.SaveChanges();
+           return RedirectToAction("");
 
             
         }
 
-        //accion para eliminar
+        //boton para eliminar datos de la tabla
         /*public IActionResult EliminarCliente (int id)
         {
             List<Infopre> infopre = _context.infopre.where(a => a.prestamoid == id).ToList();
